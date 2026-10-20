@@ -1,16 +1,13 @@
-# CPU-only PyTorch: the extra index serves the "+cpu" wheel (no CUDA libraries, a few hundred MB
-# instead of several GB). pip prefers 2.14.1+cpu over the plain 2.14.1 build from PyPI.
+# CPU-only PyTorch for GitHub's runners (no GPU)
 --extra-index-url https://download.pytorch.org/whl/cpu
-torch==2.14.1
+torch==2.14.0
 
-# Versions below are the ones pipeline/predict.py was tested with.
-# If load_state_dict() ever complains about missing/unexpected GAT keys, match
-# torch_geometric to the version used in the training notebook.
-torch_geometric==2.8.1
-transformers==5.20.1
-huggingface_hub==2.2.0
-pandas==3.0.2
-numpy==2.4.4
+# Versions below are exactly what predict.py ran with locally (Python 3.13)
+torch_geometric==2.8.0.post1
+transformers==4.57.6
+huggingface_hub==0.36.2
+pandas==2.3.3
+numpy==2.4.6
 pandas-ta-classic==0.8.32
-SQLAlchemy==2.1.5
+SQLAlchemy==2.0.52
 psycopg2-binary==2.9.13
