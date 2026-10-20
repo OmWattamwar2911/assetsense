@@ -1,0 +1,21 @@
+   # secrets
+   .env
+   .env.*
+
+   # python
+   .venv/
+   venv/
+   __pycache__/
+   *.pyc
+
+   # local results
+   predictions_test.csv
+
+   # node (also covered inside frontend/)
+   node_modules/
+   dist/
+
+   # notebooks and OS files
+   .ipynb_checkpoints/
+   .DS_Store
+   Thumbs.db
